@@ -12,7 +12,6 @@ bool isUnique(int n, int indexCounter, int* tempArray){
   	  unique = false;
   	  return unique;
   	}
-  	
   }
   return unique;
 }
@@ -24,15 +23,15 @@ int* array_merge(int num_arrays, int* sizes, int** values) {
   int l;
   int tempCounter = 0;
 
-  for(k = 0; k < num_arrays; i++ ){
+  for(k = 0; k < num_arrays; k++ ) {
   	tempCounter = tempCounter + sizes[k];
   }
 
   int *tempArray = (int*) calloc(tempCounter, sizeof(int));
-  
+
   int indexCounter = 0;
   for(i = 0; i < num_arrays; i++){
-  	for(j = 0; j<sizes[i]; j++){
+  	for(j = 0; j < sizes[i]; j++){
   		if(isUnique(values[i][j],indexCounter,tempArray)){
   			tempArray[indexCounter] = values[i][j];
   			indexCounter++;
